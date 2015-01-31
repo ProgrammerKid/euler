@@ -38,3 +38,27 @@ def removeOdds(array):
 		if not element % 2: #if element is even
 			newArray.append(element)
 	return newArray
+
+def toList(thing):
+	thing = str(thing)
+	newArray = []
+	for char in thing:
+		newArray.append(char)
+	return newArray
+
+def invertList(array):
+	newArray = []
+	for thing in array:
+		newArray = [thing] + newArray
+	return newArray
+
+def numbersInRange(minimum, maximum):
+	newArray = []
+	counter = minimum
+	while counter >= minimum and counter <= maximum:
+		newArray.append(counter)
+		counter = counter + 1
+	return newArray
+
+def sortList(array):
+	return sorted(array)
