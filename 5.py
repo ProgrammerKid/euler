@@ -1,18 +1,5 @@
-import lists
+import lists, multiples
 
-divisors = lists.numbersInRange(1, 20)
-testing = 2520
+print "The LCM of all numbers below 10 is:\n" +  str(1 * 2 * 2 * 2 *  3 * 3 * 5 * 7)
 
-while 1:
-	numberWorks = True
-	for num in divisors:
-		if testing % num != 0 and numberWorks:
-			numberWorks = False
-
-		print str(testing) + "\t" + str(num)
-	if numberWorks:
-		break
-	else:
-		testing = testing + 1
-
-print testing
+print "The LCM of all the numbers below 20 is:\n" + str(1 * 2 * 2 * 2 * 2 * 3 * 3 * 5 * 7 * 11 * 13 * 17 * 19)
