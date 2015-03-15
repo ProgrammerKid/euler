@@ -25,3 +25,20 @@ def findPrimeFactor(num):
 			x = x + 1
 	return x
 
+def findPrimesTill(maximum):
+	primes = []
+	for i in range(1, maximum + 1):
+		if isPrime(i):
+			primes.append(i)
+	return primes
+
+def findPrimesAmt(maximum):
+	primes = []
+	i = 1
+	counter = 1
+	while(counter <= maximum):
+		if isPrime(i):
+			primes.append(i)
+			counter = counter + 1
+		i = i +  1
+	return primes
