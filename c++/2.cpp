@@ -2,19 +2,19 @@
 using namespace std;
 
 int main() {
-	int fib[3] = {1, 2, 3};
-	int sum = 2; //make sure to include the '2' {1, 2, 3}
+	int fib[2] = {1, 2};
+	int sum = 0;
 
-	for(int i = 0; i < 10; i++)
-		if(fib[2] % 2 == 0) {
-			sum += fib[2];
+	while(fib[1] < 4000000) {	
+		if(fib[1] % 2 == 0) {
+			sum += fib[1];
 		}
 
-		int tmp = fib[1];
+		int tmp = fib[0];
 		fib[0] = fib[1];
-		fib[1] = fib[2];
-		fib[2] = fib[1] + tmp;
-	
+		fib[1] = fib[0] + tmp;
+	}
+
 	cout << sum << endl;
 	return 0;
 }
