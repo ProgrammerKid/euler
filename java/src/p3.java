@@ -1,9 +1,11 @@
 class p3 {
 	public static void main(String args[]) {
-		long x = 600851475143; //the product we are checking for
+		long x = 600851475143L; //the product we are checking for
 		for(long i = x - 1; i > 0; i--) {
-			if(isPrime(i) && x % i == 0)
+			if(isPrime(i) && x % i == 0) {
 				System.out.println(i);
+				System.out.println(i);
+			}
 		}
 	}
 
