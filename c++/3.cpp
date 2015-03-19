@@ -2,32 +2,29 @@
 using namespace std;
 
 bool isPrime(long x) {
-	long test = 2;
-
-	//just some special cases
-	if(x == 0 or x == 1 or x == 2 or x == 3)
-		return true;
-	
-	while(test < x / 2 + 1) {
-		if(x % test == 0)
+	for(int i = 2; i <= (x/2) + 1; i++) {
+		if(x % i == 0 && i != x) {
 			return false;
-		test++;
+		}
 	}
 	return true;
 }
 
-int main() {
-	long number = 600851475143;
-	long test = 2;
-	long largest = 0;
-
-	while(test < number) {
-		if(isPrime(test) and number % test == 0 and test > largest) {
-			largest = test;
-			cout << largest << endl;
+long * primesTill(long max) {
+	long x[max];
+	int currPos = 0;
+	for(long i = 1; i <= max; i++) {
+		if(isPrime(i)) {
+			x[currPos] = i;
 		}
-		test += 2;
 	}
-	
-	cout << largest << endl;
+	return x;
+}
+
+int main() {
+	long * x = primesTill(10);
+	for(int i = 0; i < sizeof(x); i++) {
+		cout << x[i] << endl;
+	}
+	return 0;
 }
